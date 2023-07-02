@@ -1,14 +1,16 @@
 import React from "react"
 import { list } from "../../data/Data"
 
+
+
 const RecentCard = () => {
   return (
     <>
-      <div className='content grid3 mtop'>
+      <div className='grid3 ' >
         {list.map((val, index) => {
-          const { cover, category, location, name, price, type } = val
+          const { cover, category, location, name, price, type,seater } = val
           return (
-            <div className='box shadow' key={index}>
+            <div className='box shadow' key={index} style={{sm:{width:"180px"}} }>
               <div className='img'>
                 <img src={cover} alt='' />
               </div>
@@ -21,12 +23,18 @@ const RecentCard = () => {
                 <p>
                   <i className='fa fa-location-dot'></i> {location}
                 </p>
+               <p className="seater">
+                 <li> {seater}
+                 
+                  </li>
+               </p>
               </div>
-              <div className='button flex'>
+              <div className='button flex' style={{sm:{width:"100px" ,display:"flex",flexDirection:"column"}  }}>
                 <div>
-                  <button className='btn2'>{price}</button> <label htmlFor=''>/sqft</label>
+                  <button className='btn2'>{price}/month</button> <label htmlFor=''></label>
+                  <span>{type}</span>
                 </div>
-                <span>{type}</span>
+               
               </div>
             </div>
           )

@@ -21,8 +21,12 @@
   }
   .contact form div {
     flex-direction: column;
+    height: 50px;
   }
   .contact input {
     width: 100%;
   }
+ 
 }
+
+

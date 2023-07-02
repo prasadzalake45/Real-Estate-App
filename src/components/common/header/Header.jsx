@@ -3,6 +3,7 @@ import "./header.css"
 import { nav } from "../../data/Data"
 import { Link } from "react-router-dom"
 
+
 const Header = () => {
   const [navList, setNavList] = useState(false)
 
@@ -23,12 +24,15 @@ const Header = () => {
             </ul>
           </div>
           <div className='button flex'>
-            <h4>
-              <span>2</span> My List
-            </h4>
+            <a href="https://willowy-cactus-32c683.netlify.app/">
             <button className='btn1'>
-              <i className='fa fa-sign-out'></i> Sign In
+              <i className='fa fa-sign-out'   ></i> Sign In
             </button>
+            </a>
+           
+      
+
+
           </div>
 
           <div className='toggle'>

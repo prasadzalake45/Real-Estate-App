@@ -56,3 +56,12 @@ footer ul li {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (max-width: 800px) {
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+  footer .container > div {
+    margin-bottom: 20px;
+  }
+}
+
